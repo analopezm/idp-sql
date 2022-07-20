@@ -48,10 +48,10 @@ def index() -> str:
             lead_team = "DOGS"
             vote_diff = dogs_count - cats_count
         leader_message = (
-            f"{lead_team} ganan por {vote_diff} voto{'s' if vote_diff > 1 else ''}"
+            f"{lead_team} ganan por {vote_diff} depósito{'s' if vote_diff > 1 else ''}"
         )
     else:
-        leader_message = "Las votaciones coinciden!"
+        leader_message = "Los depósitos coinciden!"
 
     context["leader_message"] = leader_message
     context["lead_team"] = lead_team
