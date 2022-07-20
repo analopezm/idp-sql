@@ -30,7 +30,7 @@
 </head>
 <body class="yellow lighten-5">
   <nav class="teal darken-3">
-    <div class="nav-wrapper container"><a class="brand-logo center" href="#!">Proyecto Demo Portal De depósitos del Jugador</a>
+    <div class="nav-wrapper container"><a class="brand-logo center" href="#!">Elige el juego para tus depósitos</a>
       <ul class="left" id="nav-mobile">
         <button class="waves-effect waves-light btn" id="signInButton">Login con Google</button>
       </ul>
@@ -45,23 +45,23 @@
         <div class="{% if lead_team == 'CATS' %}card-panel teal lighten-4{% else %}card-panel{% endif %}"">
           <i class="material-icons large">🐱</i>
           <h3>{{cats_count}} votos</h3>
-          <button class="btn" id="voteCats">Vota por JUEGO CATS</button>
+          <button class="btn" id="voteCats">Deposita para JUEGO CATS</button>
         </div>
       </div>
       <div class="col s6 m5">
         <div class="{% if lead_team == 'DOGS' %}card-panel teal lighten-4{% else %}card-panel{% endif %}"">
           <i class="material-icons large">🐶</i>
           <h3>{{dogs_count}} votos</h3>
-          <button class="btn" id="voteDogs">Vota por JUEGO DOGS</button>
+          <button class="btn" id="voteDogs">Deposita para JUEGO DOGS</button>
         </div>
       </div>
     </div>
-    <h4 class="header center">Votaciones recientes</h4>
+    <h4 class="header center">Depósitos recientes</h4>
     <ul class="container collection center" >
       {% for vote in recent_votes %}
       <li class="collection-item avatar">
         <i class="material-icons circle teal lighten-1">{% if vote.candidate == "CATS" %}🐱{% elif vote.candidate == "DOGS" %}🐶{%else%}❓{% endif %}</i>
-        <span class="title">Un voto para </span><b>'{{vote.candidate}}'</b>
+        <span class="title">Un depósito para </span><b>'{{vote.candidate}}'</b>
         <p>se realizó a las {{vote.time_cast}}</p>
       </li>
       {% endfor %}
